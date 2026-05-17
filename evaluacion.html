@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación - Proyecto Artesanal</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilos específicos para lograr que la imagen abarque TODA la página */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            /* Coloca aquí el enlace de la imagen que quieres usar */
+            background-image: url('https://i.pinimg.com/736x/e7/0e/d6/e70ed69aa741fc3cdcc068a7359dd6dc.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Mantiene la imagen fija al hacer scroll */
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            /* Alineado con la altura del menú */
+        }
+
+
+
+        /* Estilo para el Pie de Página (Footer) */
+        .pie-pagina {
+            background-color: #001428;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 0.9rem;
+            width: 100%;
+            margin-top: auto;
+            border-top: 3px solid #ffffff;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .pie-pagina strong{
+            font-style: bold;
+            color: antiquewhite;
+            font-size: 15px;
+        }
+
+        .pie-pagina p {
+            margin: 4px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENÚ DE HAMBURGUESA IDÉNTICO -->
+    <nav class="navbar">
+        <div class="logo">Producción Artesanal | Evaluación </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-hamburguesa">&#9776;</label>
+        <ul class="menu-items">
+            <li><a href="index.html">Producción Artesanal</a></li>
+            <li><a href="proyecto.html">Proyecto de Producción</a></li>
+            <li><a href="exposicion.html">Exposición</a></li>
+            <li><a href="evaluacion.html" class="active">Evaluación</a></li>
+        </ul>
+    </nav>
+
+
+
+    <!-- PIE DE PÁGINA REQUERIDO -->
+    <footer class="pie-pagina">
+        <p><strong>Alumno:</strong> Evelym Lulu Sandoval Velázquez </p>
+        <p><strong>Escuela:</strong> Escuela Secundaria Técnica No. 30 "Lazaro Cardenas del Rio"</p>
+        <p>Mayo 2026</p>
+    </footer>
+
+</body>
+
+</html>

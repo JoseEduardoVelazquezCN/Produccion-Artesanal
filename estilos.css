@@ -1,0 +1,320 @@
+/* Configuracion Básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    padding-top: 70px;
+    /* Espacio para que el menú fijo no tape el contenido */
+}
+
+/* Barra de Navegación */
+.navbar {
+    background-color: #141d26;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Icono de Hamburguesa (El botón) */
+.menu-hamburguesa {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: block;
+}
+
+/* Ocultar el checkbox que controla el menú */
+#menu-toggle {
+    display: none;
+}
+
+/* Menú Desplegable */
+.menu-items {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    /* Oculto por defecto a la derecha */
+    background-color: #0d1722;
+    width: 250px;
+    height: calc(100vh - 60px);
+    list-style: none;
+    transition: right 0.3s ease;
+    /* Animación suave al abrir/cerrar */
+}
+
+.menu-items li {
+    border-bottom: 1px solid #4f5d73;
+}
+
+.menu-items a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+/* Efecto HOVER solicitado para la opción activa/seleccionada */
+.menu-items a:hover {
+    background-color: #0c3091;
+    color: #fff;
+    padding-left: 25px;
+    /* Pequeño efecto de desplazamiento */
+}
+
+/* Clases para marcar la página actual (Opcional, para estilo extra) */
+.menu-items a.active {
+    background-color: #0a63e8;
+}
+
+/* Lógica con CSS: Cuando el checkbox esté marcado, muestra el menú */
+#menu-toggle:checked~.menu-items {
+    right: 0;
+}
+
+/* Contenido Principal */
+.contenido {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contenido h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.contenido p {
+    line-height: 1.6;
+}
+
+
+/* --- NUEVOS ESTILOS PARA INDEX.HTML --- */
+
+/* Fondo con imagen y opacidad para la página de inicio */
+.fondo-artesanal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Reemplaza esta URL por la de tu imagen de fondo si lo deseas */
+    background-image: url('https://www.gob.mx/cms/uploads/action_program/main_image/811/post_fonart_int.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.20;
+    /* Controla qué tan transparente es el fondo (0.15 es 15%) */
+    z-index: -1;
+    /* Lo envía detrás de todo el contenido */
+}
+
+/* Título vistoso y llamativo */
+.titulo-llamativo {
+    font-family: 'Georgia', serif;
+    /* Tipo de letra más elegante y vistoso */
+    font-size: 3rem;
+    color: #8e44ad;
+    /* Color púrpura artesanal llamativo */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+/* Contenedor de las tarjetas de productos (Responsive Grid) */
+.galeria-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Se adapta a PC y Móvil automáticamente */
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Tarjetas individuales de productos */
+.tarjeta-producto {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por la tarjeta */
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de las imágenes de los productos */
+.tarjeta-producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* Evita que la imagen se deforme */
+}
+
+/* Textos dentro de la tarjeta */
+.tarjeta-info {
+    padding: 20px;
+}
+
+.tarjeta-info h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 5px;
+}
+
+.tarjeta-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Ajustes para pantallas pequeñas (Celulares) */
+@media (max-width: 600px) {
+    .titulo-llamativo {
+        font-size: 2rem;
+        /* Título un poco más pequeño en celular para que no se corte */
+    }
+
+    .contenido {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+}
+
+/* --- NUEVAS SECCIONES INFORMATIVAS (INDEX.HTML) --- */
+
+.seccion-informativa {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px dashed #e0e0e0;
+}
+
+.seccion-informativa h2 {
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Subrayado decorativo para los títulos de sección */
+.seccion-informativa h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #8e44ad;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Contenedor flex que alinea imagen y texto lado a lado */
+.bloque-contenido {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Invierte el orden en la segunda sección (Efecto espejo) */
+.bloque-contenido.invertido {
+    flex-direction: row-reverse;
+}
+
+.bloque-imagen {
+    flex: 1;
+    min-width: 280px;
+}
+
+.bloque-imagen img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bloque-texto {
+    flex: 1.2;
+}
+
+.bloque-texto p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Adaptación para pantallas móviles */
+@media (max-width: 768px) {
+
+    .bloque-contenido,
+    .bloque-contenido.invertido {
+        flex-direction: column;
+        /* Se apilan verticalmente */
+        gap: 20px;
+    }
+
+    .bloque-imagen img {
+        height: 220px;
+        /* Imagen un poco más baja en móvil */
+    }
+
+    .seccion-informativa h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* --- SECCIÓN DE VIDEO RESPONSIVO (INDEX.HTML) --- */
+
+/* --- SECCIÓN DE VIDEO RESPONSIVO (INDEX.HTML) --- */
+
+.contenedor-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 (Proporción de video estándar) */
+    margin: 20px 0 40px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
